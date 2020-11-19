@@ -1,0 +1,18 @@
+<h1>List from StackOverFlow</h1>
+
+<ul>
+<% results.forEach(function(result){ %>
+        <div style="color: red">Questions</div>
+        <br>
+        <li><p>Title: <%= result.question.title %></p></li>
+        <li><p>Date: <%= result.question.date %></p></li>
+        <li><p>Votes: <%= result.question.votes %></p></li>
+        <li><p>Answers: <%= result.question.answers %></p></li>
+
+        <div style="color: red">Answers</div>
+        <br>
+        <% result.answer.forEach(function(finalResult){%>
+            <li> <%= finalResult.text %></li>
+        <% }) %>
+<% }) %>
+</ul>
